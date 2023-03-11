@@ -9,7 +9,12 @@ const wishlistSlice = createSlice({
 		setItems(state, action) {
 			state.items = action.payload;
 		},
-		removeItem(state, { payload: { id, wishlistItems } }: any) {
+		removeItem(
+			state,
+			{
+				payload: { id, wishlistItems },
+			}: { payload: { id: any; wishlistItems: any } }
+		) {
 			state.items = wishlistItems.filter((item: any) => id !== item.id);
 		},
 	},

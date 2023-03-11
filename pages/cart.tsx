@@ -190,7 +190,7 @@ const Cart = () => {
 				duration: 9000,
 				isClosable: true,
 			});
-			dispatch(cartActions.clear());
+			dispatch(cartActions.clear(1));
 		}, 3000);
 	};
 
